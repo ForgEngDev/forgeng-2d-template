@@ -1,5 +1,13 @@
 # ForgEng 2D Template
 
+<p align="center">
+  <img src="media/forgeng-2d-inspiration.png" alt="2D adventure inspiration — pixel hero on a mountain cliff at night" width="100%" />
+</p>
+
+<p align="center">
+  <em>2D adventure mood board — pixel character, layered parallax world, atmospheric night scene</em>
+</p>
+
 **TypeScript starter template for browser games** built with **[ForgEng](https://forgeng.dev)** — a **WebGPU-first**, modular game engine that runs directly in modern browsers (no native runtime install).
 
 This repository is the **2D** starter sibling of [`forgeng-3d-template`](https://github.com/ForgEngDev/forgeng-3d-template). Use it to bootstrap client-side 2D games with Vite + TypeScript, then grow into the full ForgeNG 3.0 stack documented at [forgeng.dev](https://forgeng.dev).
