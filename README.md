@@ -55,12 +55,15 @@ Documented on [forgeng.dev](https://forgeng.dev) / ForgeNG 3.0 docs (not all ena
 
 ## Requirements
 
+- Git (to clone this repository)
 - Node.js 18+
 - A browser/device with **WebGPU** support (ForgeNG 3.0 does not silently switch renderer)
 
 ## Quick start
 
 ```bash
+git clone https://github.com/ForgEngDev/forgeng-2d-template.git
+cd forgeng-2d-template
 npm install
 npm run dev
 ```
