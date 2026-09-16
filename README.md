@@ -55,6 +55,10 @@ Advanced metrics: toggle in the side panel, or open with `?advanced=1`.
 - Orange hero + blue wall collider (deterministic rollback on overlap)
 - Requires a browser with **WebGPU**
 
+## Sibling template
+
+3D starter: [forgeng-3d-template](https://github.com/ForgEngDev/forgeng-3d-template)
+
 ## License
 
 UNLICENSED / private template — adjust as needed for your org.
