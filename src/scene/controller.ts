@@ -1,21 +1,21 @@
 import { binding, controls, defineActionMap } from "forgeng/contracts/actions";
 
-/** Jedan izvor istine: šta je aktivno u Controller-u (prikaz u HUD-u + wiring). */
+/** Single source of truth for active controls, HUD display, and input wiring. */
 export const ACTIVE_CONTROLS = [
-  { id: "wasd", label: "Tastatura · WASD", help: "Pomeranje heroja" },
-  { id: "arrows", label: "Tastatura · Strelice", help: "Isto kretanje kao WASD" },
-  { id: "space", label: "Tastatura · Space", help: "Akcija + notifikacija" },
-  { id: "e", label: "Tastatura · E", help: "Reset pozicije heroja" },
-  { id: "q", label: "Tastatura · Q", help: "Pauza / nastavak animacije" },
-  { id: "lmb", label: "Miš · Levi klik", help: "Ista akcija kao Space" },
-  { id: "rmb", label: "Miš · Desni klik", help: "Sekundarna akcija" },
-  { id: "mmb", label: "Miš · Srednji klik", help: "Tercijarna akcija" },
-  { id: "touch", label: "Touch · Tap", help: "Ista akcija kao Space" },
+  { id: "wasd", label: "Keyboard · WASD", help: "Move the hero" },
+  { id: "arrows", label: "Keyboard · Arrow keys", help: "Same movement as WASD" },
+  { id: "space", label: "Keyboard · Space", help: "Action + notification" },
+  { id: "e", label: "Keyboard · E", help: "Reset the hero position" },
+  { id: "q", label: "Keyboard · Q", help: "Pause / resume animation" },
+  { id: "lmb", label: "Mouse · Left click", help: "Same action as Space" },
+  { id: "rmb", label: "Mouse · Right click", help: "Secondary action" },
+  { id: "mmb", label: "Mouse · Middle click", help: "Tertiary action" },
+  { id: "touch", label: "Touch · Tap", help: "Same action as Space" },
 ] as const;
 
 export type ControlId = (typeof ACTIVE_CONTROLS)[number]["id"];
 
-/** Semantic Input Actions mapa (ForgeNG 2D način). */
+/** Semantic Input Actions map for the ForgeNG 2D workflow. */
 export const PlayerControls = defineActionMap({
   id: "template.2d:player-controls",
   actions: {
@@ -51,7 +51,7 @@ export interface ControllerHandlers {
 }
 
 /**
- * Dopunski ulaz (Space / E / Q / miš) pored Input Actions move vektora.
+ * Additional input (Space / E / Q / mouse) alongside the Input Actions movement vector.
  */
 export class Controller {
   private readonly keys = new Set<string>();
@@ -156,12 +156,12 @@ export class Controller {
 }
 
 const MOVEMENT_LABELS: Record<string, { key: string; label: string }> = {
-  KeyW: { key: "W", label: "gore" },
-  KeyS: { key: "S", label: "dole" },
-  KeyA: { key: "A", label: "levo" },
-  KeyD: { key: "D", label: "desno" },
-  ArrowUp: { key: "↑", label: "gore" },
-  ArrowDown: { key: "↓", label: "dole" },
-  ArrowLeft: { key: "←", label: "levo" },
-  ArrowRight: { key: "→", label: "desno" },
+  KeyW: { key: "W", label: "up" },
+  KeyS: { key: "S", label: "down" },
+  KeyA: { key: "A", label: "left" },
+  KeyD: { key: "D", label: "right" },
+  ArrowUp: { key: "↑", label: "up" },
+  ArrowDown: { key: "↓", label: "down" },
+  ArrowLeft: { key: "←", label: "left" },
+  ArrowRight: { key: "→", label: "right" },
 };

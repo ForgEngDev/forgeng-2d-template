@@ -35,7 +35,7 @@ A focused **2D starter** (not the full engine surface):
 - pixel-art camera (**320×180**, integer-fit, nearest sampling)
 - orange hero + platform + wall collider (deterministic overlap rollback)
 - WASD / arrows movement, Space / pointer actions, E reset, Q animation toggle
-- DomUiShell side panel: **Kontrole** + optional **Metrike** (`?advanced=1`)
+- DomUiShell side panel: **Controls** + optional **Metrics** (`?advanced=1`)
 - vendored ForgeNG **3.4.2 2D preset** + DomUiShell under `src/vendor/forgeng/`
 
 ## Engine capabilities you can grow into

@@ -1,7 +1,7 @@
 import type { UiDisposable, UiShellLike } from "@forgeng/ui-dom";
 import { ACTIVE_CONTROLS } from "./controller";
 
-/** Izvor metrika iz 2D igre / scene. */
+/** Metrics exposed by the 2D game and scene. */
 export interface MetricsSource {
   getCanvasSize(): { width: number; height: number };
   getSceneId(): string;
@@ -18,8 +18,8 @@ function readAdvancedFromUrl(): boolean {
 }
 
 /**
- * Engine GUI: početnici vide Kontrole + status;
- * napredne Metrike tek preko toggle-a ili ?advanced=1.
+ * Beginner-friendly engine GUI: Controls and status are always visible;
+ * advanced Metrics appear only after using the toggle or ?advanced=1.
  */
 export class Hud {
   private readonly disposers: UiDisposable[] = [];
@@ -46,12 +46,12 @@ export class Hud {
     this.disposers.push(
       ui.settings.register({
         id: "template.controls",
-        title: "Kontrole",
+        title: "Controls",
         fields: [
           {
             id: "status",
             label: "Status",
-            read: () => `Spreman · ${this.fps} FPS`,
+            read: () => `Ready · ${this.fps} FPS`,
             kind: "status",
           },
           ...ACTIVE_CONTROLS.map((control) => ({
@@ -62,7 +62,7 @@ export class Hud {
           })),
           {
             id: "advanced",
-            label: "Napredne metrike",
+            label: "Advanced metrics",
             kind: "boolean",
             read: () => this.advanced,
             write: (value: string | number | boolean | null) => {
@@ -75,8 +75,8 @@ export class Hud {
             kind: "status",
             read: () =>
               this.advanced
-                ? "Metrike su uključene (?advanced=1)"
-                : "Uključi gore ili otvori ?advanced=1",
+                ? "Metrics are enabled (?advanced=1)"
+                : "Enable above or open ?advanced=1",
           },
         ],
       }),
@@ -84,7 +84,7 @@ export class Hud {
     this.disposers.push(
       ui.contributions.register({
         id: "template.controls.panel",
-        title: "Kontrole",
+        title: "Controls",
         slot: "side-panel",
         order: 10,
         settingsSchemaId: "template.controls",
@@ -94,7 +94,7 @@ export class Hud {
     this.disposers.push(
       ui.settings.register({
         id: "template.metrics",
-        title: "Metrike",
+        title: "Metrics",
         fields: [
           { id: "fps", label: "FPS", kind: "status", read: () => String(this.fps) },
           {
@@ -105,13 +105,13 @@ export class Hud {
           },
           {
             id: "time",
-            label: "Vreme scene",
+            label: "Scene time",
             kind: "status",
             read: () => `${this.timeSeconds.toFixed(1)} s`,
           },
           {
             id: "scene",
-            label: "Scena",
+            label: "Scene",
             kind: "status",
             read: () => this.source?.getSceneId() ?? "—",
           },
@@ -126,13 +126,13 @@ export class Hud {
           },
           {
             id: "animating",
-            label: "Animacija",
+            label: "Animation",
             kind: "status",
-            read: () => (this.source?.getAnimating() ? "walk/idle" : "pauzirano"),
+            read: () => (this.source?.getAnimating() ? "walk/idle" : "paused"),
           },
           {
             id: "resolution",
-            label: "Rezolucija",
+            label: "Resolution",
             kind: "status",
             read: () => {
               const size = this.source?.getCanvasSize();
@@ -151,7 +151,7 @@ export class Hud {
     this.disposers.push(
       ui.contributions.register({
         id: "template.metrics.panel",
-        title: "Metrike",
+        title: "Metrics",
         slot: "side-panel",
         order: 20,
         settingsSchemaId: "template.metrics",
@@ -188,7 +188,7 @@ export class Hud {
     }
 
     const toast = this.ensureToast();
-    toast.innerHTML = `<strong>Kontroler</strong><span>${escapeHtml(message)}</span>`;
+    toast.innerHTML = `<strong>Controls</strong><span>${escapeHtml(message)}</span>`;
     toast.hidden = false;
 
     this.notifyTimer = setTimeout(() => {

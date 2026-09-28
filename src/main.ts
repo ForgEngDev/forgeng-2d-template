@@ -5,9 +5,9 @@ import { MainScene } from "./scene/mainScene";
 import { SCENE_ID } from "./scene/ids";
 
 /**
- * Engine ulaz (kao Phaser Game config) — 2D preset.
- * Ovde podešavaš canvas, veličinu, UI provider i spisak scena.
- * Sadržaj scene živi u src/scene/ — ne ovde.
+ * Engine entry point (similar to a Phaser Game config) using the 2D preset.
+ * Configure the canvas, size, UI provider, and scene list here.
+ * Scene content lives in src/scene/, not in this file.
  */
 async function main(): Promise<void> {
   try {
@@ -19,7 +19,7 @@ async function main(): Promise<void> {
         layout: "viewport",
       },
 
-      // Opciono: fiksna rezolucija umesto viewport-a
+      // Optional: use a fixed resolution instead of the viewport.
       // size: { width: 960, height: 540, autoResize: true },
 
       providers: {

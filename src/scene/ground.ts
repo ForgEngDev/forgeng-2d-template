@@ -9,7 +9,7 @@ import {
   WORLD,
 } from "./ids";
 
-/** Podloga / arena ispod heroja. */
+/** Platform / arena beneath the hero. */
 export function createPlatformSprite() {
   return sprite2d({
     id: PLATFORM,
@@ -23,7 +23,7 @@ export function createPlatformSprite() {
   });
 }
 
-/** Plavi zid — collider prepreka (kao u zvaničnom 2D starteru). */
+/** Blue wall used as a collider obstacle, as in the official 2D starter. */
 export function createWallSprite() {
   return sprite2d({
     id: WALL,

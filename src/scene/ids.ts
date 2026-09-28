@@ -1,4 +1,4 @@
-/** ID-evi entiteta / resursa u 2D sceni (jedan izvor istine). */
+/** Entity and resource IDs for the 2D scene. */
 export const WORLD = "template.2d:world";
 export const CAMERA = "template.2d:camera";
 export const PLATFORM = "template.2d:platform";
