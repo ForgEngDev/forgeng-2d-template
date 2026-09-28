@@ -1,7 +1,7 @@
 import { camera2d } from "forgeng/2d";
 import { CAMERA, WORLD } from "./ids";
 
-/** Ortografska 2D kamera: pixel-art 320×180, integer-fit. */
+/** Orthographic 2D camera: 320×180 pixel art with integer scaling. */
 export function createCamera() {
   return camera2d({
     id: CAMERA,

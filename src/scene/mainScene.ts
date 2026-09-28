@@ -20,8 +20,8 @@ import {
 } from "./ids";
 
 /**
- * Glavna 2D scena — sastavlja heroja, collider-e, input i HUD.
- * (Forge2d koristi scene definition umesto Scene klase.)
+ * Main 2D scene that combines the hero, colliders, input, and HUD.
+ * Forge2d uses a scene definition instead of a Scene class.
  */
 export class MainScene {
   private readonly hero = new Hero();
@@ -76,10 +76,10 @@ export class MainScene {
       onAction: (source) => {
         const label =
           source === "space"
-            ? "Space — akcija"
+            ? "Space — action"
             : source === "touch"
-              ? "Touch — akcija"
-              : "Levi klik — akcija";
+              ? "Touch — action"
+              : "Left click — action";
         this.hud.notify(label);
       },
       onInteract: () => {
@@ -89,7 +89,7 @@ export class MainScene {
           rotation: 0,
           scale: [1, 1],
         });
-        this.hud.notify("E — hero vraćen");
+        this.hud.notify("E — hero reset");
       },
       onToggleAnimate: () => {
         this.animating = !this.animating;
@@ -97,12 +97,12 @@ export class MainScene {
           this.animation?.play(IDLE, "restart");
         }
         this.hud.notify(
-          this.animating ? "Q — animacija uključena" : "Q — animacija pauzirana",
+          this.animating ? "Q — animation resumed" : "Q — animation paused",
         );
       },
-      onMouseRight: () => this.hud.notify("Desni klik — sekundarna akcija"),
-      onMouseMiddle: () => this.hud.notify("Srednji klik — tercijarna akcija"),
-      onMove: (key, label) => this.hud.notify(`${key} — pomeranje (${label})`),
+      onMouseRight: () => this.hud.notify("Right click — secondary action"),
+      onMouseMiddle: () => this.hud.notify("Middle click — tertiary action"),
+      onMove: (key, label) => this.hud.notify(`${key} — move ${label}`),
     });
 
     const tick = (now: number) => {
@@ -136,7 +136,7 @@ export class MainScene {
     if (!this.game) return;
 
     const move = this.game.actions.value(PlayerControls.move) as readonly [number, number];
-    // W/S: Input Actions "up" je +Y, a na ekranu treba W=gore → invertuj Y.
+    // Input Actions uses +Y for "up"; invert Y so W moves upward on screen.
     const moveScreen: readonly [number, number] = [move[0], -move[1]];
     const previous = this.hero.getPosition();
     const next = this.hero.move(moveScreen[0], moveScreen[1]);

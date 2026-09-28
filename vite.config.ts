@@ -6,9 +6,9 @@ const vendor = path.resolve(import.meta.dirname, "src/vendor/forgeng");
 export default defineConfig({
   resolve: {
     alias: {
-      "forgeng/presets/2d": path.join(vendor, "presets/2d/forge-2d.package.js"),
-      "forgeng/2d/runtime": path.join(vendor, "2d/runtime/forge-2d-runtime.package.js"),
-      "forgeng/2d": path.join(vendor, "2d/forge-2d.package.js"),
+      "forgeng/presets/2d": path.join(vendor, "presets/2d/forge-2d.esm.js"),
+      "forgeng/2d/runtime": path.join(vendor, "2d/runtime/forge-2d-runtime.esm.js"),
+      "forgeng/2d": path.join(vendor, "2d/forge-2d.esm.js"),
       "forgeng/contracts/actions": path.join(
         vendor,
         "contracts/actions/input-actions-contract.esm.js",

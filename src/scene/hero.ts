@@ -1,7 +1,7 @@
 import { sprite2d } from "forgeng/2d";
 import { FALLBACK_TEXTURE, HERO, HERO_ENTITY, IDLE, MATERIAL, WALK, WORLD } from "./ids";
 
-/** Narandžasti hero — pomera se WASD-om, idle/walk animacija. */
+/** Orange hero controlled with WASD, with idle and walk animations. */
 export class Hero {
   private position: readonly [number, number] = [-80, 0];
   private readonly speed = 2;
@@ -70,7 +70,7 @@ export class Hero {
     this.position = position;
   }
 
-  /** Pomeri heroja; vraća novu poziciju (pre collider rollback-a). */
+  /** Move the hero and return its new position before collider rollback. */
   public move(dx: number, dy: number): readonly [number, number] {
     const x = clamp(this.position[0] + dx * this.speed, -this.limitX, this.limitX);
     const y = clamp(this.position[1] + dy * this.speed, -this.limitY, this.limitY);

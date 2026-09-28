@@ -1356,4 +1356,4 @@ export {
   Yt as validateRender2dTextUpdateRequest,
   Ht as validateRender2dTilemapPatchRequest
 };
-
+//# sourceMappingURL=forge-2d.esm.js.map

@@ -1309,4 +1309,4 @@ export {
   Yt as validateRender2dTextUpdateRequest,
   Ht as validateRender2dTilemapPatchRequest
 };
-
+//# sourceMappingURL=render-2d-contract.esm.js.map

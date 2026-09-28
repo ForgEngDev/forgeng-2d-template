@@ -8,7 +8,7 @@ import { createPlatformSprite, createWallSprite } from "./ground";
 import { Hero } from "./hero";
 import { MATERIAL, WORLD } from "./ids";
 
-/** Sastavlja render definiciju scene (sloj, kamera, sprite-ovi, animacije). */
+/** Build the scene render definition: layer, camera, sprites, and animations. */
 export function createRenderDefinition(hero: Hero) {
   const world = defineLayer2d({ id: WORLD });
   const material = builtinSpriteMaterial2d({ id: MATERIAL });
