@@ -1,16 +1,16 @@
 {
-  "name": "forgeng-2d-template",
+  "name": "forgeng-2d-top-down-template",
   "version": "1.0.0",
-  "description": "TypeScript/WebGPU 2D game starter template for ForgEng (ForgeNG 3) — Vite + browser delivery",
+  "description": "TypeScript/WebGPU top-down 2D game starter for ForgEng (ForgeNG 3.4.2)",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/ForgEngDev/forgeng-2d-template",
+  "homepage": "https://github.com/ForgEngDev/forgeng-2d-top-down-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ForgEngDev/forgeng-2d-template.git"
+    "url": "https://github.com/ForgEngDev/forgeng-2d-top-down-template.git"
   },
   "bugs": {
-    "url": "https://github.com/ForgEngDev/forgeng-2d-template/issues"
+    "url": "https://github.com/ForgEngDev/forgeng-2d-top-down-template/issues"
   },
   "keywords": [
     "forgeng",
@@ -19,6 +19,7 @@
     "webgpu",
     "vite",
     "2d",
+    "top-down",
     "game-engine",
     "game-template",
     "browser-game",

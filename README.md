@@ -1,4 +1,4 @@
-# ForgEng 2D Template
+# ForgEng Top-Down 2D Template
 
 <p align="center">
   <img src="media/forgeng-2d-inspiration.png" alt="2D adventure inspiration — pixel hero on a mountain cliff at night" width="100%" />
@@ -10,9 +10,9 @@
 
 **TypeScript starter template for browser games** built with **[ForgEng](https://forgeng.dev)** — a **WebGPU-first**, modular game engine that runs directly in modern browsers (no native runtime install).
 
-This repository is the **2D** starter sibling of [`forgeng-3d-template`](https://github.com/ForgEngDev/forgeng-3d-template). Use it to bootstrap client-side 2D games with Vite + TypeScript, then grow into the full ForgeNG 3.4.2 stack documented at [forgeng.dev](https://forgeng.dev).
+This repository is the **top-down 2D** starter sibling of [`forgeng-2d-platformer-template`](https://github.com/ForgEngDev/forgeng-2d-platformer-template) and [`forgeng-3d-template`](https://github.com/ForgEngDev/forgeng-3d-template). Use it to bootstrap client-side top-down games with Vite + TypeScript, then grow into the full ForgeNG 3.4.2 stack documented at [forgeng.dev](https://forgeng.dev).
 
-> Keywords: `ForgEng`, `ForgeNG`, `TypeScript`, `WebGPU`, `2D game template`, `Vite`, `browser game engine`, `WGSL`, `ECS`, `transport`, `sprites`, `tilemaps`
+> Keywords: `ForgEng`, `ForgeNG`, `TypeScript`, `WebGPU`, `top-down game template`, `2D game template`, `Vite`, `browser game engine`, `WGSL`, `ECS`, `sprites`, `tilemaps`
 
 ## Why this template
 
@@ -25,11 +25,11 @@ This repository is the **2D** starter sibling of [`forgeng-3d-template`](https:/
 
 The marketing site positions the engine as **type-safe, GPU-first, web-native**: modern **WebGPU** pipelines, **WGSL** shaders, lighting, materials, shadows and post-processing, with composable scenes, ECS, providers and plugins — delivered as ordinary web assets on desktop/mobile browsers that support WebGPU ([forgeng.dev](https://forgeng.dev/en)).
 
-This template gives you a **minimal, runnable 2D game shell** on that foundation so you can start making games immediately.
+This template gives you a **minimal, runnable top-down game shell** on that foundation so you can start making games immediately.
 
 ## What you get in *this* repo
 
-A focused **2D starter** (not the full engine surface):
+A focused **top-down 2D starter** (not the full engine surface):
 
 - `Forge2d.create` engine entry (Phaser-style: config in `main.ts`, content in `src/scene/`)
 - pixel-art camera (**320×180**, integer-fit, nearest sampling)
@@ -62,8 +62,8 @@ Documented on [forgeng.dev](https://forgeng.dev) / ForgeNG 3.x docs (not all ena
 ## Quick start
 
 ```bash
-git clone https://github.com/ForgEngDev/forgeng-2d-template.git
-cd forgeng-2d-template
+git clone https://github.com/ForgEngDev/forgeng-2d-top-down-template.git
+cd forgeng-2d-top-down-template
 npm install
 npm run dev
 ```
@@ -113,6 +113,7 @@ Advanced metrics: side-panel toggle or `?advanced=1`.
 - Transport (opt-in networking composition): [https://forgeng.dev/en/forgeng-3.0/advanced/transport-composition](https://forgeng.dev/en/forgeng-3.0/advanced/transport-composition)
 - Demos: [https://forgeng.dev/en](https://forgeng.dev/en) → Demos
 - 3D sibling template: [forgeng-3d-template](https://github.com/ForgEngDev/forgeng-3d-template)
+- Platformer sibling template: [forgeng-2d-platformer-template](https://github.com/ForgEngDev/forgeng-2d-platformer-template)
 
 ## License
 

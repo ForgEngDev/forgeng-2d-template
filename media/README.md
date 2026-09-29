@@ -1,6 +1,6 @@
 # Media
 
-Presentation assets for this 2D starter repository.
+Presentation assets for this top-down 2D starter repository.
 
 | File | Notes |
 | --- | --- |
