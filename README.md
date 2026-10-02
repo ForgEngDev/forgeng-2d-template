@@ -1,5 +1,7 @@
 # ForgEng Top-Down 2D Template
 
+**Live demo:** [play.forgeng.dev/forgeng-2d-top-down-template/current/](https://play.forgeng.dev/forgeng-2d-top-down-template/current/)
+
 <p align="center">
   <img src="media/forgeng-2d-inspiration.png" alt="2D adventure inspiration — pixel hero on a mountain cliff at night" width="100%" />
 </p>
